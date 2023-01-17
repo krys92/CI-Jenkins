@@ -16,14 +16,15 @@ pipeline {
                 dir("CI_Jenkins"){
                     echo 'pip install -r requirements.txt'
                     bat 'pip install -r requirements.txt'
-                    bat 'python app.py'
                 }
             }
         }
         stage('test from github') {
             steps {
-                echo 'running test1'
-                echo 'running test2'
+                dir("CI_Jenkins"){
+                    echo 'python -m unittest'
+                    bat 'python -m unittest'
+                }
             }
         }
         stage('deploying from github'){
