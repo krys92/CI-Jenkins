@@ -1,7 +1,5 @@
 # CI with Jenkins and Github
 
-use of ngrok to connect with jenkins
-
 run the code:
 
     pip install -r reauirements.txt
