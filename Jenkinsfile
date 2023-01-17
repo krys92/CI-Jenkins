@@ -31,7 +31,7 @@ pipeline {
             steps{
                 dir("CI_Jenkins"){
                     bat 'docker build -t app .'
-                    bat 'docker run -dp 3001:3000 app'
+                    bat 'docker run app'
                 }
             }
         }
