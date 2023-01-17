@@ -7,7 +7,6 @@ pipeline {
                 dir("CI_Jenkins"){
                     echo 'clone git repo'
                     git branch: 'main', changelog: false, poll: false, url: 'https://github.com/krys92/CI-Jenkins.git'
-                    sh 'pwd'
                 }
             }
         }
