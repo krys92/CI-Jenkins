@@ -5,6 +5,7 @@ pipeline {
         stage('build from github') {
             steps {
                 echo 'fetch code'
+                echo "test"
                 echo 'build code'
             }
         }
