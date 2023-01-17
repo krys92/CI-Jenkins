@@ -7,7 +7,7 @@ pipeline {
                 dir("CI_Jenkins"){
                     echo 'clone git repo'
                     git branch: 'main', changelog: false, poll: false, url: 'https://github.com/krys92/CI-Jenkins.git'
-                    bat 'ls'
+                    bat 'dir'
                 }
             }
         }
@@ -16,7 +16,7 @@ pipeline {
                 dir("CI_Jenkins"){
                     echo 'pip install -r requirements.txt'
                     bat 'pip install -r requirements.txt'
-                    bat 'puthon app.py'
+                    bat 'python app.py'
                 }
             }
         }
